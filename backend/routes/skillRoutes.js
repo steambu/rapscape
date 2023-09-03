@@ -1,16 +1,19 @@
-// skillRoutes.js
-
+// Existing imports remain the same
 const express = require("express");
 const router = express.Router();
 
-// Existing GET route
-router.get("/", (req, res) => {
+// Existing GET route, but with the base URL attached to the imageURL
+router.get("/all", (req, res) => {
   const sql = "SELECT * FROM skills";
   req.db.all(sql, [], (err, rows) => {
     if (err) {
       throw err;
     }
-    res.json(rows);
+    const updatedRows = rows.map((skill) => {
+      skill.imageURL = `http://localhost:4000/images/${skill.imageURL}`;
+      return skill;
+    });
+    res.json(updatedRows);
   });
 });
 
@@ -49,5 +52,8 @@ router.put("/:id/levelUp", (req, res) => {
     }
   );
 });
+
+// Skill Route
+// SELECT * FROM skills
 
 module.exports = router;

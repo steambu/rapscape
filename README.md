@@ -22,6 +22,7 @@ react_sandbox
 │     ├─ App.js
 │     ├─ App.test.js
 │     ├─ components
+│     │  ├─ MenuSkills.css
 │     │  ├─ MenuSkills.jsx
 │     │  ├─ NavigationButton.jsx
 │     │  ├─ SkillCard.css
@@ -30,6 +31,9 @@ react_sandbox
 │     ├─ index.js
 │     └─ setupTests.js
 ├─ package-lock.json
-└─ package.json
+├─ package.json
+└─ public
+   └─ images
+      └─ iconRanged.png
 
 ```

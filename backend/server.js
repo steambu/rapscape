@@ -1,24 +1,29 @@
 const express = require("express");
 const cors = require("cors");
+const skillRoutes = require("./routes/skillRoutes");
+const db = require("./database"); // Step 2
+
+// Initialize Express
 const app = express();
 const port = 4000;
-const db = require("./database");
 
-// Import Routes
-const skillRoutes = require("./routes/skillRoutes");
+// Enable CORS
+app.use(cors());
 
-// Middleware to make db available in request
+// Assuming your backend/server.js and public/images are at the same level
+app.use("/images", express.static("../public/images"));
+
+// Attach database object to each request
 app.use((req, res, next) => {
+  // Step 3
   req.db = db;
   next();
 });
 
-// Enable CORS for all routes
-app.use(cors());
+// Define API routes
+app.use("/api/skills", skillRoutes); // Step 4
 
-// Use the skillRoutes module for any routes starting with /api/skills
-app.use("/api/skills", skillRoutes);
-
+// Start the server
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}/`);
+  console.log(`Server running on port ${port}`);
 });
