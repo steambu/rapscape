@@ -2,11 +2,17 @@
 ```
 react_sandbox
 ├─ backend
+│  ├─ database-functions
+│  │  ├─ activities.js
+│  │  ├─ player.js
+│  │  └─ skills.js
+│  ├─ database.db
 │  ├─ database.js
 │  ├─ routes
+│  │  ├─ activityRoutes.js
+│  │  ├─ playerRoutes.js
 │  │  └─ skillRoutes.js
-│  ├─ server.js
-│  └─ skills.db
+│  └─ server.js
 ├─ frontend
 │  ├─ package-lock.json
 │  ├─ package.json
@@ -22,11 +28,17 @@ react_sandbox
 │     ├─ App.js
 │     ├─ App.test.js
 │     ├─ components
+│     │  ├─ CardActivity.css
+│     │  ├─ CardActivity.jsx
+│     │  ├─ MenuActivities.css
+│     │  ├─ MenuActivities.jsx
 │     │  ├─ MenuSkills.css
 │     │  ├─ MenuSkills.jsx
 │     │  ├─ NavigationButton.jsx
+│     │  ├─ RapContext.js
 │     │  ├─ SkillCard.css
-│     │  └─ SkillCard.jsx
+│     │  ├─ SkillCard.jsx
+│     │  └─ TopBar.jsx
 │     ├─ index.css
 │     ├─ index.js
 │     └─ setupTests.js
@@ -34,6 +46,24 @@ react_sandbox
 ├─ package.json
 └─ public
    └─ images
-      └─ iconRanged.png
+      ├─ iconActivityRunning.png
+      ├─ iconArchaeology.png
+      ├─ iconAttack.png
+      ├─ iconCooking.png
+      ├─ iconCookling.png
+      ├─ iconDefence.png
+      ├─ iconFarming.png
+      ├─ iconInvention.png
+      ├─ iconMagic.png
+      ├─ iconNecromancy.png
+      ├─ iconPrayer.png
+      ├─ iconRanged.png
+      ├─ iconRunecrafting.png
+      ├─ iconSailing.png
+      ├─ iconSlayer.png
+      ├─ iconSmithing.png
+      ├─ iconStrength.png
+      ├─ iconSummoning.png
+      └─ iconWoodcutting.png
 
 ```
