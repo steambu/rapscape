@@ -13,7 +13,6 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "node-fetch": "^3.3.2",
-    "react-native": "^0.72.4",
     "react-router-dom": "^6.15.0",
     "sqlite3": "^5.1.6"
   },
