@@ -1,5 +1,3 @@
-// skills.js
-
 function createSkillsTable(db) {
   return new Promise((resolve, reject) => {
     db.run(

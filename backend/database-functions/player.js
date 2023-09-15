@@ -21,7 +21,7 @@ function populatePlayersTable(db) {
   return new Promise((resolve, reject) => {
     // Define initial values for the player
     const name = "JohnDoe";
-    const rap_amount = 1000;
+    const rap_amount = 1000000;
     const account_level = 1;
 
     // SQL query to insert the player into the database
